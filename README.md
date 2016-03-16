@@ -1,10 +1,10 @@
 # Example theme for Pantheon training
 
-This theme is an example subtheme of Drupal 8's Bartik theme. This theme is meant for demonstration and training purposes. It is not meant to be used as a starting point for any real site.
+This theme is an example subtheme of Drupal 8's Bartik. This theme is meant for demonstration and training purposes. It is not meant to be used as a starting point for any real site.
 
 # MidCamp 2016 Training agenda
 
-The purpose of [this training at MidCamp 2016] is to introduce developers to the ways in which Pantheon's tools interact with Drupal development best practices. By the end of the day attendees should feel comfortable with basic Drupal site development tasks like adding modules and editing custom theme files. Additionally, attendees will know where to start with Pantheon's development power tools like [Quicksilver Platform Hooks] and [Terminus], our command line tool.
+The purpose of [this training at MidCamp 2016] is to introduce developers to the ways in which Pantheon's tools interact with Drupal development best practices. By the end of the day attendees should feel comfortable with basic Drupal site development tasks like adding modules and editing custom theme files. Additionally, attendees will know where to start with Pantheon's development power tools like [Multidev], [Quicksilver Platform Hooks] and [Terminus], our command line tool.
 
 
 ## 9am - 9:30am: Introduction
@@ -20,6 +20,8 @@ The purpose of [this training at MidCamp 2016] is to introduce developers to the
 During this hour Pantheon staff will explain Pantheon's key features and demonstrate basic usage of the dashboard and other tools.
 
 ## 10:30 - 10:45am: Break
+
+During this time, Pantheon staff can help anyone who has had difficulty registering for a Pantheon account.
 
 ## 10:45 - Noon: Hands-on time
 
@@ -40,8 +42,10 @@ Once everyone has gotten this far each attendee is encouraged to work independen
 * Create a backup on the live environment. Download the archives.
 * Turn on HTTP authentication in one of the environments.
 
+## Noon - 1pm: Lunch!
 
-## 1pm - 2pm Multidev / Group work
+
+## 1pm - 2pm: Multidev / Group work
 
 This time will start with a demonstration of Pantheon's [Multidev] feature which allows for additional development environments to be created per git branch. After the demonstration, attendees will be split into groups. Group members will make Multidev branches on each other's test sites and merge them to the master branch.
 
@@ -53,7 +57,7 @@ This time will start with a demonstration of Pantheon's [Multidev] feature which
   * Merge master in B's branch.
   * Merge B's branch into master.
 
-## 2pm - 3pm Terminus, the Pantheon Command line tool
+## 2pm - 3pm: Terminus, the Pantheon Command line tool
 
 During this section we will review the basics of [Terminus][], the Pantheon command line tool.
 
@@ -94,9 +98,9 @@ Everyone will walk through the following commands together.
 * Use Terminus to find the MySQL connection information to your test environment.
 
 
-## 3pm - 3:15pm Break
+## 3pm - 3:15pm: Break
 
-## 3:15pm - 4:15pm Quicksilver Platform Hooks
+## 3:15pm - 4:15pm: Quicksilver Platform Hooks
 
 In this hour we will cover Pantheon's [Quicksilver Platform Hooks]. Quicksilver is system that allows developers to specify scripts to be run in response to Platform-level operations like cache clears, code deployments and database clones. We will start with a demo followed by everyone working together to install the [debugging example] from the [Quicksilver Examples repository].
 
@@ -127,7 +131,7 @@ workflows:
 Pick out examples from the repository and implement them: https://github.com/pantheon-systems/quicksilver-examples. A simple one to start with is [enable_dev_modules] which was covered in the demo.
 
 
-## 4:15pm - 5pm Wrap up, Questions, and independent work
+## 4:15pm - 5pm: Wrap up, Questions, and independent work
 
 During this time we will highlight additional resources like:
 
@@ -137,7 +141,7 @@ During this time we will highlight additional resources like:
 * [Weekly demo webinars]
 
 
-[this training]: http://2016.midcamp.org/training/drupal-development-best-practices-building-sites-pantheon
+[this training at MidCamp 2016]: http://2016.midcamp.org/training/drupal-development-best-practices-building-sites-pantheon
 [devel]: https://www.drupal.org/project/devel
 [d8trainingtheme]: https://github.com/stevector/d8trainingtheme
 [Multidev]: https://pantheon.io/docs/articles/sites/multidev/ 'Environments per branch'
