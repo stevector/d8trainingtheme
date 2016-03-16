@@ -1,4 +1,4 @@
-# Pantheon MidCamp training agenda 2016
+# Example theme for Pantheon MidCamp training 2016
 
 The purpose of this training is to introduce developers to the ways in which Pantheon's tools interact with Drupal development best practices. By the end of the day attendees should feel comfortable with basic Drupal site development tasks like adding modules and editing custom theme files. Additionally, attendees will know where to start with Pantheon's development power tools like [Quicksilver Platform Hooks] and [Terminus], our command line tool.
 
@@ -58,19 +58,25 @@ During this section we will review the basics of [Terminus][], the Pantheon comm
 Everyone will walk through the following commands together.
 
 * **Create a sample node on your live environment**
-  * To create this node on the live environment you need to be logged in and go to the node add form. This terminus command uses drush to generate a login link that will also redirect to a node add form: `terminus --site=perschd8training --env=live  drush 'user-login admin  node/add/article' `
+  * To create this node on the live environment you need to be logged in and go to the node add form. This terminus command uses drush to generate a login link that will also redirect to a node add form.
+    * `terminus --site=perschd8training --env=live  drush 'user-login admin  node/add/article' `
   * Create and example article node.
 * **Copy the database and files from the live site to the dev site**
   * `terminus site clone-content --site=perschd8training --from-env=live --to-env=dev`
-* Set the dev environment to SFTP mode.
+* **Set the dev environment to SFTP mode.**
   *  `terminus site set-connection-mode  --mode=sftp  --env=dev --site=perschd8training`
 * **Edit the CSS file in `d8trainingtheme`**
-  * If you don't still have your SFTP client open, you can grab the SFTP connection info with `terminus site connection-info --env=dev --site=perschd8training` and copy the fields into an SFTP client. If you want to stay entirely on the command line you can grab just the command line SFTP connection string with `terminus site connection-info --env=dev --site=perschd8training --field=sftp_command`
-  * Commit your change `terminus site code commit  --site=perschd8training --env=dev  --message="A CSS change committed via terminus"`
-  * See your commit in the log: `terminus site code log  --site=perschd8training  --env=dev`
+  * If you don't still have your SFTP client open, you can grab the SFTP connection info:
+    * `terminus site connection-info --env=dev --site=perschd8training`
+  * If you want to stay entirely on the command line you can grab just the command line SFTP connection string.
+    * `terminus site connection-info --env=dev --site=perschd8training --field=sftp_command`
+  * Commit your change.
+    * `terminus site code commit  --site=perschd8training --env=dev  --message="A CSS change committed via terminus"`
+  * See your commit in the log.
+    * `terminus site code log  --site=perschd8training  --env=dev`
 * **Deploy your change to test**
   * Note that the test environment still does not have the database change. We copied the database from live to dev, but not from live to test. That's ok. We can copy the database and files to test while also bringing code changes up from the dev environment.
-  * Use this command `terminus site deploy --env=test --sync-content --cc --updatedb --note="Deploying CSS change via terminus" --site=perschd8training`
+  * `terminus site deploy --env=test --sync-content --cc --updatedb --note="Deploying CSS change via terminus" --site=perschd8training`
 * ** Deploy to live**
   * `terminus site deploy --env=live --cc --updatedb --note="Deploying CSS change via terminus" --site=perschd8training`
 
