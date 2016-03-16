@@ -1,15 +1,19 @@
-# Example theme for Pantheon MidCamp training 2016
+# Example theme for Pantheon training
 
-The purpose of this training is to introduce developers to the ways in which Pantheon's tools interact with Drupal development best practices. By the end of the day attendees should feel comfortable with basic Drupal site development tasks like adding modules and editing custom theme files. Additionally, attendees will know where to start with Pantheon's development power tools like [Quicksilver Platform Hooks] and [Terminus], our command line tool.
+This theme is an example subtheme of Drupal 8's Bartik theme. This theme is meant for demonstration and training purposes. It is not meant to be used as a starting point for any real site.
+
+# MidCamp 2016 Training agenda
+
+The purpose of [this training at MidCamp 2016] is to introduce developers to the ways in which Pantheon's tools interact with Drupal development best practices. By the end of the day attendees should feel comfortable with basic Drupal site development tasks like adding modules and editing custom theme files. Additionally, attendees will know where to start with Pantheon's development power tools like [Quicksilver Platform Hooks] and [Terminus], our command line tool.
 
 
 ## 9am - 9:30am: Introduction
 
-* Everyone introduce yourself
+* Everyone introduce yourself.
   * What do you do with Drupal?	
   * What is your experience with Pantheon?
   * What do you want to learn today?
-* Agenda overview
+* Agenda overview.
 
 ## 9:30am - 10:30am: Pantheon overview
 
@@ -125,6 +129,7 @@ Pick out examples from the repository and implement them: https://github.com/pan
 
 ## 4:15pm - 5pm Questions and Independent work
 
+[this training]: http://2016.midcamp.org/training/drupal-development-best-practices-building-sites-pantheon
 [devel]: https://www.drupal.org/project/devel
 [d8trainingtheme]: https://github.com/stevector/d8trainingtheme
 [Multidev]: https://pantheon.io/docs/articles/sites/multidev/ 'Environments per branch'
