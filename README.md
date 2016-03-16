@@ -23,7 +23,7 @@ Pantheon staff will explain Pantheon's key features and demonstrate basic usage 
 
 During this time Pantheon staff can help anyone who has had difficulty registering for a Pantheon account.
 
-## 10:45am - Noon: Hands-on time
+## 10:45am - Noon: Installing Drupal 8 and using the dashboard
 
 This section will start with everyone walking through the same steps together:
 
