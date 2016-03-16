@@ -17,13 +17,13 @@ The purpose of [this training at MidCamp 2016] is to introduce developers to the
 
 ## 9:30am - 10:30am: Pantheon overview
 
-During this hour Pantheon staff will explain Pantheon's key features and demonstrate basic usage of the dashboard and other tools.
+Pantheon staff will explain Pantheon's key features and demonstrate basic usage of the dashboard and other tools.
 
-## 10:30 - 10:45am: Break
+## 10:30am - 10:45am: Break
 
-During this time, Pantheon staff can help anyone who has had difficulty registering for a Pantheon account.
+During this time Pantheon staff can help anyone who has had difficulty registering for a Pantheon account.
 
-## 10:45 - Noon: Hands-on time
+## 10:45am - Noon: Hands-on time
 
 This section will start with everyone walking through the same steps together:
 
@@ -32,7 +32,7 @@ This section will start with everyone walking through the same steps together:
 * Create the test environment.
 * Create the live environment.
 
-Once everyone has gotten this far each attendee is encouraged to work independently to explore areas of the Pantheon workflow. If you are uncertain of what to do next, try any of the following:
+Once everyone has gotten this far, each attendee is encouraged to work independently to explore areas of the Pantheon workflow. If you are uncertain of what to do next, try any of the following:
 
 * Add more modules.
 * Add twig files to the example theme that override Bartik.
@@ -45,7 +45,7 @@ Once everyone has gotten this far each attendee is encouraged to work independen
 ## Noon - 1pm: Lunch!
 
 
-## 1pm - 2pm: Multidev / Group work
+## 1pm - 2pm: Multidev / group work
 
 This time will start with a demonstration of Pantheon's [Multidev] feature which allows for additional development environments to be created per git branch. After the demonstration, attendees will be split into groups. Group members will make Multidev branches on each other's test sites and merge them to the master branch.
 
@@ -59,15 +59,15 @@ This time will start with a demonstration of Pantheon's [Multidev] feature which
 
 ## 2pm - 3pm: Terminus, the Pantheon Command line tool
 
-During this section we will review the basics of [Terminus][], the Pantheon command line tool.
+During this section we will review the basics of [Terminus][], the Pantheon command line tool.  You can authenticate in Terminus with your password using `terminus auth login`. You can also authenticate with a [Terminus machine token][terminus token].
 
 ### Step-by-step introduction
 
 Everyone will walk through the following commands together.
 
 * **Create a sample node on your live environment**
-  * To create this node on the live environment you need to be logged in and go to the node add form. This terminus command uses drush to generate a login link that will also redirect to a node add form.
-    * `terminus --site=SITEMACHINENAME --env=live  drush 'user-login admin  node/add/article' `
+  * To create this node on the live environment you need to be logged in and go to the node add form. This Terminus command uses drush to generate a login link that will also redirect to a node add form.
+    * `terminus --site=SITEMACHINENAME --env=live  drush 'user-login admin  node/add/article' ` replace `SITEMACHINENAME` with the machine name of your site. For example `perschd8training`.
   * Create and example article node.
 * **Copy the database and files from the live site to the dev site**
   * `terminus site clone-content --site=SITEMACHINENAME --from-env=live --to-env=dev`
@@ -78,25 +78,25 @@ Everyone will walk through the following commands together.
     * `terminus site connection-info --env=dev --site=SITEMACHINENAME`
   * If you want to stay entirely on the command line you can grab just the command line SFTP connection string.
     * `terminus site connection-info --env=dev --site=SITEMACHINENAME --field=sftp_command`
+  * Edit a CSS background color.
   * Commit your change.
     * `terminus site code commit  --site=SITEMACHINENAME --env=dev  --message="A CSS change committed via terminus"`
   * See your commit in the log.
-    * `terminus site code log  --site=perschd8training  --env=dev`
-* **Deploy your change to test**
+    * `terminus site code log  --site=SITEMACHINENAME --env=dev`
+* **Deploy your change to the test environment**
   * Note that the test environment still does not have the database change. We copied the database from live to dev, but not from live to test. That's ok. We can copy the database and files to test while also bringing code changes up from the dev environment.
   * `terminus site deploy --env=test --sync-content --cc --updatedb --note="Deploying CSS change via terminus" --site=SITEMACHINENAME`
-* ** Deploy to live**
+* **Deploy to the live environment**
   * `terminus site deploy --env=live --cc --updatedb --note="Deploying CSS change via terminus" --site=SITEMACHINENAME`
 
 
 ### Prompts for independent work
 
-* Use `terminus workflows watch` to see logging of operations like deployments and cache clears.
-* Do the same workflow as above, but make your CSS changes in a multidev environment. Create the multidev environment and merge it back to dev using terminus.
+* Use `terminus workflows watch` to see logging of operations like deployments and cache clearing.
+* Do the same workflow as above, but make your CSS changes in a Multidev environment. Create the Multidev environment and merge it back to dev using Terminus.
 * Create a database backup on the live environment. Then download that backup.
 * Add another training attendee to your site as a developer with Terminus.
 * Use Terminus to find the MySQL connection information to your test environment.
-
 
 ## 3pm - 3:15pm: Break
 
@@ -147,6 +147,7 @@ During this time we will highlight additional resources like:
 [Multidev]: https://pantheon.io/docs/articles/sites/multidev/ 'Environments per branch'
 [Quicksilver Platform Hooks]: https://pantheon.io/docs/articles/sites/quicksilver/ 'Respond to platform-level events with Quicksilver'
 [Terminus]: http://github.com/pantheon-systems/terminus "The Pantheon command line tool"
+[drush]: http://www.drush.org/en/master/ "Drupal's command line tool"
 [terminus token]: https://pantheon.io/docs/articles/local/cli/machine-tokens/ "Create a terminus token with your account"
 [debugging example]: https://github.com/pantheon-systems/quicksilver-examples/tree/master/debugging_example "Print debugging output to terminus workflows watch"
 [Quicksilver Examples repository]: https://github.com/pantheon-systems/quicksilver-examples/tree/master/debugging_example "A GitHub repository of example Quicksilver script."
