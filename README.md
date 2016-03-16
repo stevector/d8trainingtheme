@@ -127,7 +127,15 @@ workflows:
 Pick out examples from the repository and implement them: https://github.com/pantheon-systems/quicksilver-examples. A simple one to start with is [enable_dev_modules] which was covered in the demo.
 
 
-## 4:15pm - 5pm Questions and Independent work
+## 4:15pm - 5pm Wrap up, Questions, and independent work
+
+During this time we will highlight additional resources like:
+
+* The [Power Users Google Group]
+* [Training videos]
+* Our [documentation site]. [Pull requests on our documentation are welcome]!
+* [Weekly demo webinars]
+
 
 [this training]: http://2016.midcamp.org/training/drupal-development-best-practices-building-sites-pantheon
 [devel]: https://www.drupal.org/project/devel
@@ -140,3 +148,8 @@ Pick out examples from the repository and implement them: https://github.com/pan
 [Quicksilver Examples repository]: https://github.com/pantheon-systems/quicksilver-examples/tree/master/debugging_example "A GitHub repository of example Quicksilver script."
 [debug.php]: https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/debugging_example/debug.php
 [enable_dev_modules]: https://github.com/pantheon-systems/quicksilver-examples/tree/master/enable_dev_modules  "Enable devel module when cloning a database from live to dev"
+[Power Users Google Group]: https://pantheon.io/docs/articles/power-users/
+[Training videos]: https://pantheon.io/essential-training
+[documentation site]: https://pantheon.io/docs/
+[Pull requests on our documentation are welcome]: https://github.com/pantheon-systems/documentation
+[Weekly demo webinars]: https://pantheon.io/pantheon-product-demo
