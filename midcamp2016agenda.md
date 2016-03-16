@@ -58,7 +58,7 @@ During this section we will review the basics of [Terminus][], the Pantheon comm
 Everyone will walk through the following commands together.
 
 * **Create a sample node on your live environment**
-  * To create this node on the live environment you need to be logged in and go to the node add form. This terminus command uses drush to generate a login link that will also redirect to a node add form: `terminus --site=perschd8training --env=live  drush 'user-login admin  node/add/article'`
+  * To create this node on the live environment you need to be logged in and go to the node add form. This terminus command uses drush to generate a login link that will also redirect to a node add form: `terminus --site=perschd8training --env=live  drush 'user-login admin  node/add/article' `
   * Create and example article node.
 * **Copy the database and files from the live site to the dev site**
   * `terminus site clone-content --site=perschd8training --from-env=live --to-env=dev`
