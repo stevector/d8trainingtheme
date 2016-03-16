@@ -102,11 +102,13 @@ Everyone will walk through the following commands together.
 
 ## 3:15pm - 4:15pm: Quicksilver Platform Hooks
 
-In this hour we will cover Pantheon's [Quicksilver Platform Hooks]. Quicksilver is system that allows developers to specify scripts to be run in response to Platform-level operations like cache clears, code deployments and database clones. We will start with a demo followed by everyone working together to install the [debugging example] from the [Quicksilver Examples repository].
+In this hour we will cover Pantheon's [Quicksilver Platform Hooks]. Quicksilver is system that allows developers to specify scripts to be run in response to platform-level operations like cache clearing, code deployments and database cloning. We will start with a demo followed by everyone working together to install the [debugging example] from the [Quicksilver Examples repository].
 
 ### Setting up the debugging example
 
 The [debugging example] can be set up using SFTP mode or git mode. If you use SFTP mode, the changes will have to be committed before `pantheon.yml` starts working.
+
+### Step-by-step introduction
 
 * First create an empty file, `pantheon.yml`, in your Drupal root, it should be in the same folder as Drupal's `index.php`.
   * The copy the follow text into that file
@@ -121,24 +123,24 @@ workflows:
         script: private/scripts/debug.php
 ```
 
-* Copy [debug.php] to `private/scripts/debug.php`. You will have to create these folders, starting with `private`, which will also go next to `index.php`.
+* Copy `[debug.php]` to `private/scripts/debug.php`. You will have to create these folders, starting with `private`, which will also go next to `index.php`.
 * Push your changes up to Pantheon, or if you're using SFTP mode, commit your changes.
   * Once the changes are committed, use `terminus workflows watch` to see reporting on workflow.
-  * Clear caches and see the debugging information come through.
+  * Clear caches and see the debugging information come through the terminal.
 
 ### Prompts for independent work
 
 Pick out examples from the repository and implement them: https://github.com/pantheon-systems/quicksilver-examples. A simple one to start with is [enable_dev_modules] which was covered in the demo.
 
 
-## 4:15pm - 5pm: Wrap up, Questions, and independent work
+## 4:15pm - 5pm: Wrap up, questions, and independent work
 
 During this time we will highlight additional resources like:
 
-* The [Power Users Google Group]
-* [Training videos]
-* Our [documentation site]. [Pull requests on our documentation are welcome]!
-* [Weekly demo webinars]
+* [The Power Users Google Group].
+* [Training videos].
+* [Our documentation site]. [Pull requests on our documentation are welcome]!
+* [Weekly demo webinars].
 
 
 [this training at MidCamp 2016]: http://2016.midcamp.org/training/drupal-development-best-practices-building-sites-pantheon
@@ -153,8 +155,8 @@ During this time we will highlight additional resources like:
 [Quicksilver Examples repository]: https://github.com/pantheon-systems/quicksilver-examples/tree/master/debugging_example "A GitHub repository of example Quicksilver script."
 [debug.php]: https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/debugging_example/debug.php
 [enable_dev_modules]: https://github.com/pantheon-systems/quicksilver-examples/tree/master/enable_dev_modules  "Enable devel module when cloning a database from live to dev"
-[Power Users Google Group]: https://pantheon.io/docs/articles/power-users/
+[The Power Users Google Group]: https://pantheon.io/docs/articles/power-users/
 [Training videos]: https://pantheon.io/essential-training
-[documentation site]: https://pantheon.io/docs/
+[Our documentation site]: https://pantheon.io/docs/
 [Pull requests on our documentation are welcome]: https://github.com/pantheon-systems/documentation
 [Weekly demo webinars]: https://pantheon.io/pantheon-product-demo
