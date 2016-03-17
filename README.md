@@ -123,7 +123,7 @@ workflows:
         script: private/scripts/debug.php
 ```
 
-* Copy `[debug.php]` to `private/scripts/debug.php`. You will have to create these folders, starting with `private`, which will also go next to `index.php`.
+* Copy [debug.php](https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/debugging_example/debug.php) to `private/scripts/debug.php`. You will have to create these folders, starting with `private`, which will also go next to `index.php`.
 * Push your changes up to Pantheon, or if you're using SFTP mode, commit your changes.
   * Once the changes are committed, use `terminus workflows watch` to see reporting on workflow.
   * Clear caches and see the debugging information come through the terminal.
@@ -153,7 +153,6 @@ During this time we will highlight additional resources like:
 [terminus token]: https://pantheon.io/docs/articles/local/cli/machine-tokens/ "Create a terminus token with your account"
 [debugging example]: https://github.com/pantheon-systems/quicksilver-examples/tree/master/debugging_example "Print debugging output to terminus workflows watch"
 [Quicksilver Examples repository]: https://github.com/pantheon-systems/quicksilver-examples/tree/master/debugging_example "A GitHub repository of example Quicksilver script."
-[debug.php]: https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/debugging_example/debug.php
 [enable_dev_modules]: https://github.com/pantheon-systems/quicksilver-examples/tree/master/enable_dev_modules  "Enable devel module when cloning a database from live to dev"
 [The Power Users Google Group]: https://pantheon.io/docs/articles/power-users/
 [Training videos]: https://pantheon.io/essential-training
