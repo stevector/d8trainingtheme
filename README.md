@@ -2,9 +2,9 @@
 
 This theme is an example subtheme of Drupal 8's Bartik. This theme is meant for demonstration and training purposes. It is not meant to be used as a starting point for any real site.
 
-# MidCamp 2016 Training agenda
+# DrupalCon New Orleans 2016 Training agenda
 
-The purpose of [this training at MidCamp 2016] is to introduce developers to the ways in which Pantheon's tools interact with Drupal development best practices. By the end of the day attendees should feel comfortable with basic Drupal site development tasks like adding modules and editing custom theme files. Additionally, attendees will know where to start with Pantheon's development power tools like [Multidev], [Quicksilver Platform Hooks] and [Terminus], our command line tool.
+The purpose of [this training at DrupalCon New Orleans] is to introduce developers to the ways in which Pantheon's tools interact with Drupal development best practices. By the end of the day attendees should feel comfortable with basic Drupal site development tasks like adding modules and editing custom theme files. Additionally, attendees will know where to start with Pantheon's development power tools like [Multidev], [Quicksilver Platform Hooks] and [Terminus], our command line tool.
 
 
 ## 9am - 9:30am: Introduction
@@ -100,7 +100,7 @@ Everyone will walk through the following commands together.
 
 ## 3pm - 3:15pm: Break
 
-## 3:15pm - 4:15pm: Quicksilver Platform Hooks
+## 3:15pm - 4:00pm: Quicksilver Platform Hooks
 
 In this hour we will cover Pantheon's [Quicksilver Platform Hooks]. Quicksilver is system that allows developers to specify scripts to be run in response to platform-level operations like cache clearing, code deployments and database cloning. We will start with a demo followed by everyone working together to install the [debugging example] from the [Quicksilver Examples repository].
 
@@ -130,10 +130,10 @@ workflows:
 
 ### Prompts for independent work
 
-Pick out examples from the repository and implement them: https://github.com/pantheon-systems/quicksilver-examples. A simple one to start with is [enable_dev_modules] which was covered in the demo.
+Pick out examples from the repository and implement them: https://github.com/pantheon-systems/quicksilver-examples. A simple one to start with is [generate_dev_content].
 
 
-## 4:15pm - 5pm: Wrap up, questions, and independent work
+## 4:00pm - 4:30pm: Wrap up, questions, and independent work
 
 During this time we will highlight additional resources like:
 
@@ -143,7 +143,7 @@ During this time we will highlight additional resources like:
 * [Weekly demo webinars].
 
 
-[this training at MidCamp 2016]: http://2016.midcamp.org/training/drupal-development-best-practices-building-sites-pantheon
+[this training at DrupalCon New Orleans]: https://www.getfeedback.com/r/Pjwk7DzF
 [devel]: https://www.drupal.org/project/devel
 [d8trainingtheme]: https://github.com/stevector/d8trainingtheme
 [Multidev]: https://pantheon.io/docs/articles/sites/multidev/ 'Environments per branch'
@@ -153,7 +153,7 @@ During this time we will highlight additional resources like:
 [terminus token]: https://pantheon.io/docs/articles/local/cli/machine-tokens/ "Create a terminus token with your account"
 [debugging example]: https://github.com/pantheon-systems/quicksilver-examples/tree/master/debugging_example "Print debugging output to terminus workflows watch"
 [Quicksilver Examples repository]: https://github.com/pantheon-systems/quicksilver-examples/tree/master/debugging_example "A GitHub repository of example Quicksilver script."
-[enable_dev_modules]: https://github.com/pantheon-systems/quicksilver-examples/tree/master/enable_dev_modules  "Enable devel module when cloning a database from live to dev"
+[generate_dev_content]: https://github.com/pantheon-systems/quicksilver-examples/tree/master/generate_dev_content
 [The Power Users Google Group]: https://pantheon.io/docs/articles/power-users/
 [Training videos]: https://pantheon.io/essential-training
 [Our documentation site]: https://pantheon.io/docs/
