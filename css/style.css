@@ -1,10 +1,9 @@
-/* Set major page elements to the colors of the Irish flag as this training
-will be held on St. Patrick's Day. https://en.wikipedia.org/wiki/Flag_of_Ireland
+/* Set major page elements to the colors of DrupalCon NOLA
 */
 
 
 header#header {
-	background: #169B62; /* green; */
+	background: #57308c /* purple */
 }
 
 div#page,
@@ -13,7 +12,7 @@ div#main-wrapper {
 }
 
 footer.site-footer {
-	background:  #FF883E; /* orange */
+	background:  #757428; /* gold */
 }
 
 /* This commented out CSS will be used as an example during the Terminus
