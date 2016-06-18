@@ -4,7 +4,7 @@ This theme is an example subtheme of Drupal 8's Bartik. This theme is meant for 
 
 # DrupalCon New Orleans 2016 Training agenda
 
-The purpose of [this training at DrupalCon New Orleans] is to introduce developers to the ways in which Pantheon's tools interact with Drupal development best practices. By the end of the day attendees should feel comfortable with basic Drupal site development tasks like adding modules and editing custom theme files. Additionally, attendees will know where to start with Pantheon's development power tools like [Multidev], [Quicksilver Platform Hooks] and [Terminus], our command line tool.
+The purpose of [this training at Twin Cities Drupal Camp](http://2016.tcdrupal.org/trainings/pantheon) is to introduce developers to the ways in which Pantheon's tools interact with Drupal development best practices. By the end of the day attendees should feel comfortable with basic Drupal site development tasks like adding modules and editing custom theme files. Additionally, attendees will know where to start with Pantheon's development power tools like [Multidev], [Quicksilver Platform Hooks] and [Terminus], our command line tool.
 
 
 ## 9am - 9:30am: Introduction
@@ -65,29 +65,40 @@ During this section we will review the basics of [Terminus][], the Pantheon comm
 
 Everyone will walk through the following commands together.
 
+* **Create a `.env` file to minimize typing in the following commands**
+
+```
+TERMINUS_SITE=the-machine-name-of-your-site
+```
+This file will allow you to avoid adding `--site=the-machine-name-of-your-site` on all of the following commands.
+
 * **Create a sample node on your live environment**
   * To create this node on the live environment you need to be logged in and go to the node add form. This Terminus command uses drush to generate a login link that will also redirect to a node add form.
-    * `terminus --site=SITEMACHINENAME --env=live  drush 'user-login admin  node/add/article' ` replace `SITEMACHINENAME` with the machine name of your site. For example `perschd8training`.
+    * `terminus --env=live  drush 'user-login admin  node/add/article' `
   * Create and example article node.
 * **Copy the database and files from the live site to the dev site**
-  * `terminus site clone-content --site=SITEMACHINENAME --from-env=live --to-env=dev`
-* **Set the dev environment to SFTP mode.**
-  *  `terminus site set-connection-mode  --mode=sftp  --env=dev --site=SITEMACHINENAME`
-* **Edit the CSS file in `d8trainingtheme`**
-  * If you don't still have your SFTP client open, you can grab the SFTP connection info:
-    * `terminus site connection-info --env=dev --site=SITEMACHINENAME`
-  * If you want to stay entirely on the command line you can grab just the command line SFTP connection string.
-    * `terminus site connection-info --env=dev --site=SITEMACHINENAME --field=sftp_command`
-  * Edit a CSS background color.
+  * `terminus site clone-content --from-env=live --to-env=dev`
+* **Set the dev environment to SFTP mode so that the filesystem is writeable.**
+  *  `terminus  --env=dev site set-connection-mode  --mode=sftp`
+* **Make a configuration change on the Dev environment**
+  * Move a Drupal Block into a sidebar.
+  * Export the configuration change.
+    * `terminus  --env=dev drush "config-export -y"`
+    * See the files that have changed.
+    * `terminus --env=dev site code diffstat`
   * Commit your change.
-    * `terminus site code commit  --site=SITEMACHINENAME --env=dev  --message="A CSS change committed via terminus"`
+    * `terminus --env=dev site code commit --message="A config change committed via terminus"`
   * See your commit in the log.
-    * `terminus site code log  --site=SITEMACHINENAME --env=dev`
+    * `terminus site code log  --env=dev`
 * **Deploy your change to the test environment**
-  * Note that the test environment still does not have the database change. We copied the database from live to dev, but not from live to test. That's ok. We can copy the database and files to test while also bringing code changes up from the dev environment.
-  * `terminus site deploy --env=test --sync-content --cc --updatedb --note="Deploying CSS change via terminus" --site=SITEMACHINENAME`
+  * Note that the test environment still does not have the node added above. We copied the database from live to dev, but not from live to test. That's ok. We can copy the database and files to test while also bringing code changes up from the dev environment.
+  * `terminus site deploy --env=test --sync-content --cc --updatedb --note="Deploying config change via terminus"`
+  * Import the configuration change on the Test environment.
+    * `terminus  --env=test drush "config-import -y"`
 * **Deploy to the live environment**
-  * `terminus site deploy --env=live --cc --updatedb --note="Deploying CSS change via terminus" --site=SITEMACHINENAME`
+  * `terminus site deploy --env=live --cc --updatedb --note="Deploying config change via terminus"`
+  * Import the configuration change on the Live environment.
+    * `terminus  --env=test drush "config-import -y"`
 
 
 ### Prompts for independent work
@@ -102,40 +113,15 @@ Everyone will walk through the following commands together.
 
 ## 3:15pm - 4:00pm: Quicksilver Platform Hooks
 
-In this hour we will cover Pantheon's [Quicksilver Platform Hooks]. Quicksilver is system that allows developers to specify scripts to be run in response to platform-level operations like cache clearing, code deployments and database cloning. We will start with a demo followed by everyone working together to install the [debugging example] from the [Quicksilver Examples repository].
+In this hour we will cover Pantheon's [Quicksilver Platform Hooks]. Quicksilver is system that allows developers to specify scripts to be run in response to platform-level operations like cache clearing, code deployments and database cloning. We will start with a demo followed by everyone working together to install the [config import example](https://github.com/pantheon-systems/quicksilver-examples/tree/master/drush_config_import) from the [Quicksilver Examples repository].
 
-### Setting up the debugging example
-
-The [debugging example] can be set up using SFTP mode or git mode. If you use SFTP mode, the changes will have to be committed before `pantheon.yml` starts working.
-
-### Step-by-step introduction
-
-* First create an empty file, `pantheon.yml`, in your Drupal root, it should be in the same folder as Drupal's `index.php`.
-  * The copy the follow text into that file
-```yaml
-api_version: 1
-
-workflows:
-  clear_cache:
-    after:
-      - type: webphp
-        description: Dump debugging output
-        script: private/scripts/debug.php
-```
-
-* Copy [debug.php](https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/debugging_example/debug.php) to `private/scripts/debug.php`. You will have to create these folders, starting with `private`, which will also go next to `index.php`.
-* Push your changes up to Pantheon, or if you're using SFTP mode, commit your changes.
-  * Once the changes are committed, use `terminus workflows watch` to see reporting on workflow.
-  * Clear caches and see the debugging information come through the terminal.
 
 ### Prompts for independent work
 
 Pick out examples from the repository and implement them: https://github.com/pantheon-systems/quicksilver-examples. A simple one to start with is [generate_dev_content].
 
 
-## 4:00pm - 4:30pm: Wrap up, questions, and independent work
-
-During this time we will highlight additional resources like:
+## Additional resources
 
 * [The Power Users Google Group].
 * [Training videos].
