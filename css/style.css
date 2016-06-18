@@ -1,9 +1,9 @@
-/* Set major page elements to the colors of DrupalCon NOLA
+/* Set major page elements to the colors of the Minnesota Twins
+http://teamcolorcodes.com/minnesota-twins-color-codes/
 */
 
-
 header#header {
-	background: #57308c /* purple */
+	background: #042462 /* Twins Navy */
 }
 
 div#page,
@@ -12,11 +12,14 @@ div#main-wrapper {
 }
 
 footer.site-footer {
-	background:  #757428; /* gold */
+	background:  #D31145; /* Twins Red */
 }
 
-/* This commented out CSS will be used as an example during the Terminus
-portion of the training.
+html body {
+	background:#CFAB7A;/* Twins Gold */
+}
+
+/*
 .node__meta {
 	font-weight: bold;
 }
