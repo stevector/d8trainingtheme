@@ -129,7 +129,6 @@ Pick out examples from the repository and implement them: https://github.com/pan
 * [Weekly demo webinars].
 
 
-[this training at DrupalCon New Orleans]: https://www.getfeedback.com/r/Pjwk7DzF
 [devel]: https://www.drupal.org/project/devel
 [d8trainingtheme]: https://github.com/stevector/d8trainingtheme
 [Multidev]: https://pantheon.io/docs/articles/sites/multidev/ 'Environments per branch'
