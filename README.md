@@ -2,7 +2,7 @@
 
 This theme is an example subtheme of Drupal 8's Bartik. This theme is meant for demonstration and training purposes. It is not meant to be used as a starting point for any real site.
 
-# DrupalCon New Orleans 2016 Training agenda
+# Twin Cities Drupal Camp 2016 Training agenda
 
 The purpose of [this training at Twin Cities Drupal Camp](http://2016.tcdrupal.org/trainings/pantheon) is to introduce developers to the ways in which Pantheon's tools interact with Drupal development best practices. By the end of the day attendees should feel comfortable with basic Drupal site development tasks like adding modules and editing custom theme files. Additionally, attendees will know where to start with Pantheon's development power tools like [Multidev], [Quicksilver Platform Hooks] and [Terminus], our command line tool.
 
