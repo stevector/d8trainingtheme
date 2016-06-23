@@ -98,7 +98,7 @@ This file will allow you to avoid adding `--site=the-machine-name-of-your-site` 
 * **Deploy to the live environment**
   * `terminus site deploy --env=live --cc --updatedb --note="Deploying config change via terminus"`
   * Import the configuration change on the Live environment.
-    * `terminus  --env=test drush "config-import -y"`
+    * `terminus  --env=live drush "config-import -y"`
 
 
 ### Prompts for independent work
