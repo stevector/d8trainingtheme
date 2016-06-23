@@ -65,7 +65,7 @@ During this section we will review the basics of [Terminus][], the Pantheon comm
 
 Everyone will walk through the following commands together.
 
-* **Create a `.env` file to minimize typing in the following commands**
+* **Create a `.env` file containing the following line in the root of your git clone of the site.**
 
 ```
 TERMINUS_SITE=the-machine-name-of-your-site
