@@ -1,9 +1,9 @@
-/* Set major page elements to the colors of the Minnesota Twins
+/* Set major page elements to the colors of Berkeley
 http://teamcolorcodes.com/minnesota-twins-color-codes/
 */
 
 header#header {
-	background: #042462 /* Twins Navy */
+	background: #003262 /* Berkeley Blue */
 }
 
 div#page,
@@ -12,11 +12,11 @@ div#main-wrapper {
 }
 
 footer.site-footer {
-	background:  #D31145; /* Twins Red */
+	background:  #C4820E; /* Web Medalist */
 }
 
 html body {
-	background:#CFAB7A;/* Twins Gold */
+	background:#3B7EA1;/* Founders Rock */
 }
 
 /*
